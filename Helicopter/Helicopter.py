@@ -21,6 +21,10 @@ y = 200
 
 y_move = 5
 
+def gameOver():
+    pygame.quit()
+    quit()
+
 def helicopter(x, y, image):
     # blit - draw one image onto another
     surface.blit(img, (x,y))
@@ -45,6 +49,11 @@ while not game_over:
     
     surface.fill(black)
     helicopter(x,y,img)
+
+    # If Helicopter touches Lower or Upward Boundary
+    # Game Over 
+    if y > 360 or y < 0:
+        gameOver()
             
     pygame.display.update()
     # 60 Frames Per Second
