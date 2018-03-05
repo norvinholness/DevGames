@@ -1,6 +1,6 @@
 import pygame 
 
-#initiat Pygame
+#initiate Pygame
 pygame.init()
 
 #set display
